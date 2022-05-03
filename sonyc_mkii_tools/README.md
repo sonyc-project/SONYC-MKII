@@ -1,10 +1,7 @@
-# sonyc_mkii_tools
-Tools for use with the MkII
-
-## Install
+# Install
 
 ```bash
-git clone https://github.com/sonyc-project/sonyc_mkii_tools.git
+git clone https://github.com/sonyc-project/SONYC-MKII.git
 cd sonyc_mkii_tools
 
 # install python reader
@@ -15,8 +12,16 @@ cd master_mel
 ./install.sh
 ```
 
-## Usage
+## Alternatives
 
+```bash
+cd master_mel
+make
+cp master_mel /usr/local/bin/
+```
+
+# Usage
+## Reading data from the base station
 ```python
 import mkiiread
 
@@ -40,20 +45,17 @@ with mkiiread.read() as reader:
         print(x)
 ```
 
-## Alternatives
+## Pushing Configuration Updates Locally or Wirelessly
+master_mel can also be used to push configuration updates to the MKII nodes in the sensor network from the base station. Configuration messages are JSON strings that can be piped through stdin or read from a JSON file. Examples:
 
-```bash
-cd master_mel
-make
-cp master_mel /usr/local/bin/
+` pi@raspberrypi:~/sonyc_mkii_tools/master_mel $ ./master_mel --dev=/dev/ttyS4 --listen --print-data-stdout --print-timestamps --send-data <<< '{"ml_op_time": 5}'`
+
+`pi@raspberrypi:~/sonyc_mkii_tools/master_mel $ ./master_mel --dev=/dev/ttyS4 --listen --print-data-stdout --print-timestamps --send-data < test.json`
+
+
+Configuration messages could be local (for the USB-connected base station only) or wireless (propagated wirelssly to all, or a subset of, MKII nodes from the base). Examples of supported config messages are given below. Note that wireless messages have a hard limit of 109 bytes due to the inherent bandwidth limitations of the LoRA network, therefore longer JSON commands should be broken down into smaller subsets.
+
 ```
-
-## Config Update
-These are test vectors that Dhrubo sent to Nathan. Will fill in full config.
-
-```python
-## Local tests
-
 {"agg_period": 20}
 {"ml_op_time": 7}
 {"ml_op_time": 3}
