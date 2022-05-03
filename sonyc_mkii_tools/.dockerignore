@@ -1,0 +1,8 @@
+.git
+.dockerignore
+Dockerfile
+docker-compose.yml
+README.md
+mkiiread
+setup.py
+

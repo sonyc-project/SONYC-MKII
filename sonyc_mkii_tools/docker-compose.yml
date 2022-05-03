@@ -1,0 +1,12 @@
+version: '2.1'
+
+services:
+  mastermel:
+    container_name: mastermel
+    image: mastermel:latest
+    build: "./"
+    #command: --send-hello
+    devices:
+      - /dev/ttyACM1:/dev/ttyACM1
+    ports:
+      - '61393:61393'

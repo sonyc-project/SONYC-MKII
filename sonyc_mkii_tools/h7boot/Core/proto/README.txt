@@ -1,0 +1,1 @@
+Generate h7boot.pb.c andh7boot.pb.h with 'make && make install' in ../../../proto

@@ -1,0 +1,12 @@
+[Unit]
+Description=MasterMel Mk-ii Parser
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/mastermel-run.sh
+Restart=always
+User=root
+RestartSec=20
+
+[Install]
+WantedBy=multi-user.target
