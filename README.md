@@ -1,5 +1,5 @@
 # SONYC-MKII
-This repo contains the codebase and tools of our paper [Infrastructure-free, Deep Learned Urban Noise Monitoring at ∼100mW](https://arxiv.org/abs/2203.06220) in ICCPS '22. Please cite our work as:
+This repo contains the codebase and tools in our paper [Infrastructure-free, Deep Learned Urban Noise Monitoring at ∼100mW](https://arxiv.org/abs/2203.06220) in ICCPS '22. Please cite our work as:
 
 ```
 @article{yun2022infrastructure,
