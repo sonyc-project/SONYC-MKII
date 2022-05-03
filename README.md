@@ -10,10 +10,10 @@ This repo contains the codebase and toolset used in our paper [Infrastructure-fr
 ```
 
 # Overview
-- [sonyc_mkii_tools](https://github.com/sonyc-project/SONYC-MKII/tree/main/sonyc_mkii_tools): A narrowly focused piece of software that sits on the USB-serial link. We often use it for debugging but practically it only exists to de-mux and decode the bitstream and hand off data to higher level services. It can also interface with the bootloader to reprogram motes.
+- [sonyc_mkii_tools](https://github.com/sonyc-project/SONYC-MKII/tree/main/sonyc_mkii_tools): A narrowly focused piece of software that sits on the USB-serial link on the base station (Pi). Used to de-mux and decode the bitstream from the base station and hand off data to higher level services. It can also interface with the bootloader to reprogram motes.
+
+Detailed steps on installation and usage provided in the [sonyc_mkii_tools/README](https://github.com/sonyc-project/SONYC-MKII/tree/main/sonyc_mkii_tools#readme).
 
 # Additional Resources
 ML Training is 
 https://github.com/ksangeeta2429/embedding-approx
-
-Test
