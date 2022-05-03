@@ -56,6 +56,8 @@ master_mel can also be used to push configuration updates to the MKII nodes in t
 Configuration messages could be local (for the USB-connected base station only) or wireless (propagated wirelssly to all, or a subset of, MKII nodes from the base). Examples of supported config messages are given below. Note that wireless messages have a hard limit of 109 bytes due to the inherent bandwidth limitations of the LoRA network, therefore longer JSON commands should be broken down into smaller subsets.
 
 ```
+## Local config messages for the USB-connected node only, usually the base station
+
 {"agg_period": 20}
 {"ml_op_time": 7}
 {"ml_op_time": 3}
@@ -75,7 +77,7 @@ Configuration messages could be local (for the USB-connected base station only) 
 }
 
 
-## Wireless tests - NO UNNECESSARY SPACES/TABS/NEWLINES IN WIRELESS CONTROL MESSAGES PLEASE. EVERY BYTE COUNTS. 
+## Wireless config messages - NO UNNECESSARY SPACES/TABS/NEWLINES IN WIRELESS CONTROL MESSAGES PLEASE. EVERY BYTE COUNTS. 
 ## Max. Payload Size: 109 bytes.
 
 # Broadcast
