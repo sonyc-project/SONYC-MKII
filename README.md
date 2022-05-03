@@ -13,5 +13,6 @@ This repo contains the codebase and toolset used in our paper [Infrastructure-fr
 - [sonyc_mkii_tools](https://github.com/sonyc-project/SONYC-MKII/tree/main/sonyc_mkii_tools): A narrowly focused piece of software that sits on the USB-serial link on the base station (Pi). Used to de-mux and decode the bitstream from the base station and hand off data to higher level services. It can also interface with the bootloader to reprogram motes. Detailed steps on installation and usage given in [sonyc_mkii_tools/README](https://github.com/sonyc-project/SONYC-MKII/tree/main/sonyc_mkii_tools#readme).
 
 # Additional Resources
-ML Training is 
-https://github.com/ksangeeta2429/embedding-approx
+- Trained embedding models: [TBD}
+- SONYC-L3 embedding model and classifier training code: https://github.com/ksangeeta2429/embedding-approx
+- eMote OS: [TBD]
